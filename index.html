@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberStyle Studio - Potong Rambut & Grooming</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --accent-color: #d4af37; /* Gold */
+            --text-color: #f5f5f5;
+            --text-muted: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* HEADER & HERO SECTION */
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        header h1 {
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            font-size: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* CONTAINER & LAYOUT */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        /* PRICING / SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .service-card .price {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* FORM BOOKING */
+        .booking-form {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #121212;
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #25D366; /* WhatsApp Green */
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #1ebd56;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000000;
+            color: var(--text-muted);
+            margin-top: 50px;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BARBERSTYLE STUDIO</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Tampil Rapi & Percaya Diri</h2>
+        <p>Layanan potong rambut profesional dengan teknik gradasi dan presisi tinggi.</p>
+    </section>
+
+    <div class="container">
+        <!-- SEKSI LAYANAN -->
+        <h2 class="section-title">Layanan & Harga</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Classic Haircut</h3>
+                <div class="price">Rp 50.000</div>
+                <p>Potong rambut, cuci rambut, pemijatan ringan, dan styling pomade.</p>
+            </div>
+            <div class="service-card">
+                <h3>Gentlemen Fade Cut</h3>
+                <div class="price">Rp 65.000</div>
+                <p>Potong rambut teknik Fade/Taper, cuci, konsultasi bentuk wajah, & styling.</p>
+            </div>
+            <div class="service-card">
+                <h3>Complete Grooming</h3>
+                <div class="price">Rp 90.000</div>
+                <p>Haircut + Shaving/Trim Kumis Jenggot + Hot Towel + Hair Tonic.</p>
+            </div>
+        </div>
+
+        <!-- SEKSI FORMULIR RESERVASI -->
+        <h2 class="section-title">Reservasi Jadwal</h2>
+        <form class="booking-form" id="whatsappForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" placeholder="Contoh: Budi Santoso" required>
+            </div>
+
+            <div class="form-group">
+                <label for="layanan">Pilih Layanan:</label>
+                <select id="layanan" required>
+                    <option value="">-- Pilih Layanan --</option>
+                    <option value="Classic Haircut (Rp 50k)">Classic Haircut - Rp 50.000</option>
+                    <option value="Gentlemen Fade Cut (Rp 65k)">Gentlemen Fade Cut - Rp 65.000</option>
+                    <option value="Complete Grooming (Rp 90k)">Complete Grooming - Rp 90.000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Cukur:</label>
+                <input type="date" id="tanggal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jam">Jam Cukur:</label>
+                <input type="time" id="jam" required>
+            </div>
+
+            <div class="form-group">
+                <label for="catatan">Catatan / Permintaan Khusus (Opsional):</label>
+                <textarea id="catatan" rows="3" placeholder="Contoh: Ingin potong model French Crop / Low Fade"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <span>Pesan via WhatsApp</span>
+            </button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BarberStyle Studio. All rights reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT INTEGRASI WHATSAPP API -->
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // 1. PENGATURAN NOMOR WHATSAPP BARBERSHOP
+            // Ganti nomor di bawah ini dengan nomor Anda (Gunakan kode negara '62' tanpa tanda '+')
+            const nomorBarber = "6285826676129"; 
+
+            // 2. AMBIL DATA DARI FORMULIR
+            const nama = document.getElementById('nama').value;
+            const layanan = document.getElementById('layanan').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const jam = document.getElementById('jam').value;
+            const catatan = document.getElementById('catatan').value || "-";
+
+            // 3. FORMAT PESAN WHATSAPP
+            const pesan = `Halo BarberStyle Studio, saya ingin booking jadwal potong rambut:%0A%0A` +
+                          `*Nama:* ${encodeURIComponent(nama)}%0A` +
+                          `*Layanan:* ${encodeURIComponent(layanan)}%0A` +
+                          `*Tanggal:* ${encodeURIComponent(tanggal)}%0A` +
+                          `*Jam:* ${encodeURIComponent(jam)} WIB%0A` +
+                          `*Catatan:* ${encodeURIComponent(catatan)}%0A%0A` +
+                          `Apakah slot jadwal tersebut masih tersedia? Terima kasih!`;
+
+            // 4. BUKA LINK API WHATSAPP
+            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${nomorBarber}&text=${pesan}`;
+           
+            // Arahkan pengguna ke aplikasi/web WhatsApp
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+</body>
+</html>
