@@ -1,18 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>BarberStyle Studio - Potong Rambut & Grooming</title>
-
     <style>
         /* CSS RESET & VARIABLES */
         :root {
             --bg-color: #121212;
             --card-bg: #1e1e1e;
-            --accent-color: #d4af37;
+            --accent-color: #d4af37; /* Gold */
             --text-color: #f5f5f5;
             --text-muted: #a0a0a0;
         }
@@ -30,9 +27,9 @@
             line-height: 1.6;
         }
 
-        /* HEADER */
+        /* HEADER & HERO SECTION */
         header {
-            background-color: #000;
+            background-color: #000000;
             padding: 20px;
             text-align: center;
             border-bottom: 2px solid var(--accent-color);
@@ -44,14 +41,10 @@
             font-size: 2rem;
         }
 
-        /* HERO */
         .hero {
             text-align: center;
-            padding: 70px 20px;
-            background:
-                linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-                url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80');
-
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -66,7 +59,7 @@
             font-size: 1.1rem;
         }
 
-        /* CONTAINER */
+        /* CONTAINER & LAYOUT */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -81,7 +74,7 @@
             text-transform: uppercase;
         }
 
-        /* SERVICES */
+        /* PRICING / SERVICES */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -91,7 +84,7 @@
 
         .service-card {
             background-color: var(--card-bg);
-            padding: 25px 20px;
+            padding: 20px;
             border-radius: 8px;
             border: 1px solid #333;
             text-align: center;
@@ -112,6 +105,7 @@
             color: var(--accent-color);
             font-size: 1.3rem;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         .service-card p {
@@ -119,7 +113,7 @@
             font-size: 0.9rem;
         }
 
-        /* BOOKING FORM */
+        /* FORM BOOKING */
         .booking-form {
             background-color: var(--card-bg);
             padding: 30px;
@@ -139,8 +133,8 @@
             color: var(--text-color);
         }
 
-        .form-group input,
-        .form-group select,
+        .form-group input, 
+        .form-group select, 
         .form-group textarea {
             width: 100%;
             padding: 12px;
@@ -151,32 +145,27 @@
             font-size: 1rem;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
+        .form-group input:focus, 
+        .form-group select:focus, 
         .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-color);
         }
 
-        .form-group select {
-            cursor: pointer;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-        }
-
-        /* BUTTON */
         .btn-submit {
             width: 100%;
             padding: 14px;
-            background-color: #25D366;
+            background-color: #25D366; /* WhatsApp Green */
             color: #fff;
             font-size: 1.1rem;
             font-weight: bold;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             transition: background-color 0.3s ease;
         }
 
@@ -188,318 +177,116 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #000;
+            background-color: #000000;
             color: var(--text-muted);
             margin-top: 50px;
             border-top: 1px solid #222;
         }
-
-        /* RESPONSIVE */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.7rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .container {
-                padding: 30px 15px;
-            }
-
-            .booking-form {
-                padding: 20px;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
     </style>
 </head>
-
 <body>
 
-    <!-- HEADER -->
     <header>
         <h1>BARBERSTYLE STUDIO</h1>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
         <h2>Tampil Rapi & Percaya Diri</h2>
-        <p>
-            Layanan potong rambut profesional dengan teknik
-            gradasi dan presisi tinggi.
-        </p>
+        <p>Layanan potong rambut profesional dengan teknik gradasi dan presisi tinggi.</p>
     </section>
 
-    <main class="container">
-
-        <!-- LAYANAN -->
-        <section>
-            <h2 class="section-title">Layanan & Harga</h2>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    <h3>Potong Saja</h3>
-                    <div class="price">Rp 20.000</div>
-                    <p>Potong rambut profesional.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Potong, Keramas, dan Pijat</h3>
-                    <div class="price">Rp 30.000</div>
-                    <p>Potong rambut dengan perawatan tambahan.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Cat Rambut</h3>
-                    <div class="price">Rp 75.000</div>
-                    <p>Layanan pewarnaan rambut.</p>
-                </div>
-
+    <div class="container">
+        <!-- SEKSI LAYANAN -->
+        <h2 class="section-title">Layanan & Harga</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Potong saja</h3>
+                <div class="price">Rp 20.000</div>
             </div>
-        </section>
+            <div class="service-card">
+                <h3>Potong, Keramas, dan Pijat</h3>
+                <div class="price">Rp 30.000</div>
+            </div>
+            <div class="service-card">
+                <h3>Cat rambut</h3>
+                <div class="price">Rp 75.000</div>
+            </div>
+        </div>
 
-        <!-- FORM RESERVASI -->
-        <section>
-            <h2 class="section-title">Reservasi Jadwal</h2>
+        <!-- SEKSI FORMULIR RESERVASI -->
+        <h2 class="section-title">Reservasi Jadwal</h2>
+        <form class="booking-form" id="whatsappForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" placeholder="Contoh: Budi Santoso" required>
+            </div>
 
-            <form class="booking-form" id="whatsappForm">
+            <div class="form-group">
+                <label for="layanan">Pilih Layanan:</label>
+                <select id="layanan" required>
+                    <option value="">-- Pilih Layanan --</option>
+                    <option value="Potong aja (Rp 20k)">Potong saja - Rp 20.000</option>
+                    <option value="Potong, Keramas, dan Pijat (Rp 30k)">Potong, Keramas, dan Pijat  - Rp 30.000</option>
+                    <option value="Cat rambut (Rp 75k)">Cat rambut - Rp 75.000</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="nama">Nama Lengkap:</label>
+            <div class="form-group">
+                <label for="tanggal">Tanggal Cukur:</label>
+                <input type="date" id="tanggal" required>
+            </div>
 
-                    <input
-                        type="text"
-                        id="nama"
-                        placeholder="Contoh: Budi Santoso"
-                        required
-                    >
-                </div>
+            <div class="form-group">
+                <label for="jam">Jam Cukur:</label>
+                <input type="time" id="jam" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="layanan">Pilih Layanan:</label>
+            <div class="form-group">
+                <label for="catatan">Catatan / Permintaan Khusus (Opsional):</label>
+                <textarea id="catatan" rows="3" placeholder="Contoh: Ingin potong model French Crop / Low Fade"></textarea>
+            </div>
 
-                    <select id="layanan" required>
-                        <option value="">-- Pilih Layanan --</option>
+            <button type="submit" class="btn-submit">
+                <span>Pesan via WhatsApp</span>
+            </button>
+        </form>
+    </div>
 
-                        <option value="Potong Saja (Rp 20.000)">
-                            Potong Saja - Rp 20.000
-                        </option>
-
-                        <option value="Potong, Keramas, dan Pijat (Rp 30.000)">
-                            Potong, Keramas, dan Pijat - Rp 30.000
-                        </option>
-
-                        <option value="Cat Rambut (Rp 75.000)">
-                            Cat Rambut - Rp 75.000
-                        </option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="tanggal">Tanggal Cukur:</label>
-
-                    <input
-                        type="date"
-                        id="tanggal"
-                        required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="jam">Jam Cukur:</label>
-
-                    <select id="jam" required>
-                        <option value="">-- Pilih Jam Cukur --</option>
-                    </select>
-
-                    <small style="color: #a0a0a0;">
-                        Jam operasional: 10.00 - 22.00 WIB
-                    </small>
-                </div>
-
-                <div class="form-group">
-                    <label for="catatan">
-                        Catatan / Permintaan Khusus (Opsional):
-                    </label>
-
-                    <textarea
-                        id="catatan"
-                        rows="3"
-                        placeholder="Contoh: Ingin potong model French Crop / Low Fade"
-                    ></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">
-                    Pesan via WhatsApp
-                </button>
-
-            </form>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 BarberStyle Studio. All rights reserved.</p>
     </footer>
 
-    <!-- JAVASCRIPT -->
+    <!-- JAVASCRIPT INTEGRASI WHATSAPP API -->
     <script>
-        // ==========================================
-        // 1. PENGATURAN NOMOR WHATSAPP
-        // ==========================================
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        // Gunakan kode negara 62 tanpa tanda +
-        const nomorBarber = "6285826676129";
+            // 1. PENGATURAN NOMOR WHATSAPP BARBERSHOP
+            // Ganti nomor di bawah ini dengan nomor Anda (Gunakan kode negara '62' tanpa tanda '+')
+            const nomorBarber = "6285826676129"; 
 
+            // 2. AMBIL DATA DARI FORMULIR
+            const nama = document.getElementById('nama').value;
+            const layanan = document.getElementById('layanan').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const jam = document.getElementById('jam').value;
+            const catatan = document.getElementById('catatan').value || "-";
 
-        // ==========================================
-        // 2. MEMBUAT PILIHAN JAM CU KUR
-        // ==========================================
+            // 3. FORMAT PESAN WHATSAPP
+            const pesan = `Halo BarberStyle Studio, saya ingin booking jadwal potong rambut:%0A%0A` +
+                          `*Nama:* ${encodeURIComponent(nama)}%0A` +
+                          `*Layanan:* ${encodeURIComponent(layanan)}%0A` +
+                          `*Tanggal:* ${encodeURIComponent(tanggal)}%0A` +
+                          `*Jam:* ${encodeURIComponent(jam)} WIB%0A` +
+                          `*Catatan:* ${encodeURIComponent(catatan)}%0A%0A` +
+                          `Apakah slot jadwal tersebut masih tersedia? Terima kasih!`;
 
-        const pilihanJam = document.getElementById("jam");
-
-        // Jam operasional: 10 pagi sampai 10 malam
-        const jamMulai = 10;
-        const jamSelesai = 22;
-
-        // Interval setiap 30 menit
-        const intervalMenit = 30;
-
-        for (
-            let menit = jamMulai * 60;
-            menit <= jamSelesai * 60;
-            menit += intervalMenit
-        ) {
-            const jam = Math.floor(menit / 60);
-            const menitJam = menit % 60;
-
-            const nilaiJam =
-                String(jam).padStart(2, "0") +
-                ":" +
-                String(menitJam).padStart(2, "0");
-
-            const opsi = document.createElement("option");
-
-            opsi.value = nilaiJam;
-            opsi.textContent = nilaiJam + " WIB";
-
-            pilihanJam.appendChild(opsi);
-        }
-
-
-        // ==========================================
-        // 3. MEMBATASI TANGGAL RESERVASI
-        // ==========================================
-
-        const inputTanggal = document.getElementById("tanggal");
-
-        function formatTanggalLokal(tanggal) {
-            const tahun = tanggal.getFullYear();
-            const bulan = String(
-                tanggal.getMonth() + 1
-            ).padStart(2, "0");
-
-            const hari = String(
-                tanggal.getDate()
-            ).padStart(2, "0");
-
-            return `${tahun}-${bulan}-${hari}`;
-        }
-
-        // Tanggal minimum adalah hari ini
-        const hariIni = new Date();
-
-        inputTanggal.min = formatTanggalLokal(hariIni);
-
-
-        // ==========================================
-        // 4. PROSES FORM RESERVASI
-        // ==========================================
-
-        document
-            .getElementById("whatsappForm")
-            .addEventListener("submit", function (e) {
-
-                e.preventDefault();
-
-                // Ambil data dari formulir
-                const nama = document
-                    .getElementById("nama")
-                    .value.trim();
-
-                const layanan = document
-                    .getElementById("layanan")
-                    .value;
-
-                const tanggal = document
-                    .getElementById("tanggal")
-                    .value;
-
-                const jam = document
-                    .getElementById("jam")
-                    .value;
-
-                const catatan = document
-                    .getElementById("catatan")
-                    .value.trim() || "-";
-
-
-                // Pastikan semua data wajib terisi
-                if (!nama || !layanan || !tanggal || !jam) {
-                    alert("Mohon lengkapi semua data reservasi.");
-                    return;
-                }
-
-
-                // Pastikan tanggal tidak kurang dari hari ini
-                if (tanggal < formatTanggalLokal(new Date())) {
-                    alert("Tanggal reservasi tidak boleh sebelum hari ini.");
-                    return;
-                }
-
-
-                // Pastikan jam berada dalam rentang operasional
-                if (jam < "10:00" || jam > "22:00") {
-                    alert("Jam cukur hanya tersedia pukul 10.00 sampai 22.00 WIB.");
-                    return;
-                }
-
-
-                // Format pesan WhatsApp
-                const pesan =
-                    "Halo BarberStyle Studio, saya ingin booking jadwal potong rambut:\n\n" +
-                    "*Nama:* " + nama + "\n" +
-                    "*Layanan:* " + layanan + "\n" +
-                    "*Tanggal:* " + tanggal + "\n" +
-                    "*Jam:* " + jam + " WIB\n" +
-                    "*Catatan:* " + catatan + "\n\n" +
-                    "Apakah slot jadwal tersebut masih tersedia? Terima kasih!";
-
-
-                // Encode seluruh pesan agar aman untuk URL
-                const urlWhatsApp =
-                    "https://api.whatsapp.com/send?phone=" +
-                    nomorBarber +
-                    "&text=" +
-                    encodeURIComponent(pesan);
-
-
-                // Buka WhatsApp
-                window.open(urlWhatsApp, "_blank");
-
-            });
+            // 4. BUKA LINK API WHATSAPP
+            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${nomorBarber}&text=${pesan}`;
+           
+            // Arahkan pengguna ke aplikasi/web WhatsApp
+            window.open(urlWhatsApp, '_blank');
+        });
     </script>
-
 </body>
 </html>
